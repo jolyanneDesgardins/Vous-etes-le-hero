@@ -1,0 +1,111 @@
+html {
+    background-color: #0C234B;
+
+    box-sizing: border-box;
+
+}
+
+@font-face {
+    font-family: "abandon";
+    src: url(/typo/AbandoN.ttf) format('truetype');
+}
+
+body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+
+
+}
+
+.game {
+
+    position: relative;
+    background-color: #1e5288;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    width: 650px;
+    height: 650px;
+    min-width: 400px;
+    max-width: 900px;
+    min-height: 100px;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.image {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    width: 100%;
+    object-fit: contain;
+    box-sizing: border-box;
+
+
+}
+
+.titre {
+
+    justify-content: center;
+
+    left: 17%;
+    font-family: abandon;
+    letter-spacing: 0.15em;
+    color: #020f47a5;
+
+}
+
+h2 {
+
+    justify-content: center;
+
+    left: 32%;
+    text-align: center;
+    letter-spacing: 0.15em;
+    color: #020f47a5;
+
+
+}
+
+h3 {
+    color: #d8d8dd;
+    top: 80px;
+}
+
+a {
+
+    display: inline-flex;
+    justify-content: space-around;
+    background-color: #d8d8dd;
+    border-radius: 10px;
+    padding: 10px;
+
+
+    align-items: flex-end;
+}
+
+a:hover {
+
+    background-color: #020f47a5;
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    color: #e2e9eb;
+}
+
+.choix {
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+
+}
