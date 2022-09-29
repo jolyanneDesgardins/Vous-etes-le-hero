@@ -108,5 +108,6 @@ function goToChapter(chapterName) {
   console.log(chapiterObj[chapterName]["subtitle"]);
   console.log(chapiterObj[chapterName]["texte"]);
   console.log(chapiterObj[chapterName]["image"]);
+  //console.log(chapiterObj[chapterName].option[2].texte);
 }
 
