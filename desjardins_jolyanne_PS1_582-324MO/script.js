@@ -104,6 +104,6 @@ let chapiterObj = {
 };
 
 function goToChapter(chapterName) {
-  return console.log(chapitre.subtitle);
+  return console.log(chapiterObj[chapterName]["texte"]);
 }
 
