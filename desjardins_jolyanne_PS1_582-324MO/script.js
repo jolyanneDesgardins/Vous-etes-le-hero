@@ -21,7 +21,7 @@ let chapiterObj = {
     subtitle: " deuxième choix",
     texte:
       "quelques semaine plus tard, toi et ton ami vous vous apreter a plonger dans l'eau. Ton ami te dit que vous devez explorer la faune marine qui vie pres de l'épave du bateau qui se trouve a droite. ",
-    image: "font-marin.jpg",
+    image: <img src="assets/fond-marin"></img>,
     option: [
       { texte: "droite", action: "goToChapter('chapitre4')" },
       { texte: "gauche", action: "goToChapter('chapitre3')" },
@@ -104,10 +104,11 @@ let chapiterObj = {
 };
 
 function goToChapter(chapterName) {
- 
-  console.log(chapiterObj[chapterName]["subtitle"]);
-  console.log(chapiterObj[chapterName]["texte"]);
-  console.log(chapiterObj[chapterName]["image"]);
+  document.querySelector("h1").textContent =
+    chapiterObj[chapterName]["subtitle"];
 
+  document.querySelector("h3").textContent = chapiterObj[chapterName]["texte"];
+
+  document.querySelector("img").textContent = chapiterObj[chapterName]["image"];
+  document.querySelector("a").textContent = chapiterObj[chapterName]["option"];
 }
-
