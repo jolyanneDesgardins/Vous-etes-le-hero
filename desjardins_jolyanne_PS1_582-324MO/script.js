@@ -3,8 +3,8 @@ let chapiterObj = {
     subtitle: "La rencontre",
     texte:
       "Tu as pris des cours de plonger sous-marine dams le but de rejoindre ton ami qui est un biologiste marin dans sa prochaine aventure en Australie.",
-    image: "font-marin.jpg",
-    option: [{ texte: "suivant", action: "goToChapter('chapitre2')" }],
+    image: (document.querySelector("img").src = "assets/image/fond-marin.jpg"),
+    option: [{ texte: "suivant", action: goToChapter("chapitre2") }],
   },
   chapitre2: {
     subtitle: " Le premier choix",
@@ -21,7 +21,7 @@ let chapiterObj = {
     subtitle: " deuxième choix",
     texte:
       "quelques semaine plus tard, toi et ton ami vous vous apreter a plonger dans l'eau. Ton ami te dit que vous devez explorer la faune marine qui vie pres de l'épave du bateau qui se trouve a droite. ",
-    image: (document.querySelector("img").src = "assets/image/fond-marin.jpg"),
+    image: "font-marin",
     option: [
       { texte: "droite", action: "goToChapter('chapitre4')" },
       { texte: "gauche", action: "goToChapter('chapitre3')" },
@@ -105,10 +105,11 @@ let chapiterObj = {
 
 function goToChapter(chapterName) {
   document.querySelector("h2").textContent =
-    chapiterObj[chapterName]["subtitle"];
+    chapiterObj[chapterName]["sous-titre"];
 
   document.querySelector("h3").textContent = chapiterObj[chapterName]["texte"];
 
   document.querySelector("img").textContent = chapiterObj[chapterName]["image"];
-  document.querySelector("a").textContent = chapiterObj[chapterName]["option"];
+  document.querySelectorAll("a").textContent =
+    chapiterObj[chapterName]["option"];
 }

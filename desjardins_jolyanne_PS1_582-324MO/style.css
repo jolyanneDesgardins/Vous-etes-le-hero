@@ -1,107 +1,92 @@
 html {
-    background-color: #0C234B;
+  background-color: #0c234b;
 
-    box-sizing: border-box;
-
+  box-sizing: border-box;
 }
 
 @font-face {
-    font-family: "abandon";
-    src: url(/typo/AbandoN.ttf) format('truetype');
+  font-family: "abandon";
+  src: url(/typo/AbandoN.ttf) format("truetype");
 }
 
 body {
-    position: relative;
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
-
-
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .game {
+  background-color: #1e5288;
 
-    background-color: #1e5288;
-   
-    width: 650px;
-    height: 650px;
-    min-width: 400px;
-    max-width: 900px;
-    min-height: 100px;
-    padding: 10px;
-    box-sizing: border-box;
-    text-align: center;
+  width: 650px;
+  height: 650px;
+  min-width: 400px;
+  max-width: 900px;
+  min-height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  text-align: center;
 }
 
 .image {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    width: 100%;
-    object-fit: contain;
-    box-sizing: border-box;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  width: 100%;
 
+  box-sizing: border-box;
+  padding-bottom: 5px;
 
+  max-height: 390px;
 }
 
 .titre {
+  justify-content: center;
 
-    justify-content: center;
-
-    left: 17%;
-    font-family: abandon;
-    letter-spacing: 0.15em;
-    color: #020f47a5;
-
+  left: 17%;
+  font-family: abandon;
+  letter-spacing: 0.15em;
+  color: #020f47a5;
 }
 
 h2 {
+  justify-content: center;
 
-    justify-content: center;
-
-    left: 32%;
-    text-align: center;
-    letter-spacing: 0.15em;
-    color: #020f47a5;
-
-
+  left: 32%;
+  text-align: center;
+  letter-spacing: 0.15em;
+  color: #020f47a5;
 }
 
 h3 {
-    color: #d8d8dd;
-    top: 80px;
+  color: #d8d8dd;
+  top: 80px;
 }
 
 a {
+  display: inline-flex;
+  justify-content: space-around;
+  background-color: #d8d8dd;
+  border-radius: 10px;
+  padding: 10px;
 
-    display: inline-flex;
-    justify-content: space-around;
-    background-color: #d8d8dd;
-    border-radius: 10px;
-    padding: 10px;
-
-
-    align-items: flex-end;
+  align-items: flex-end;
 }
 
 a:hover {
-
-    background-color: #020f47a5;
-    transition-property: background-color;
-    transition-duration: 0.5s;
-    color: #e2e9eb;
+  background-color: #020f47a5;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  color: #e2e9eb;
 }
 
 .choix {
-
-
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-
-
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 }
