@@ -4,13 +4,13 @@ let chapiterObj = {
     texte:
       "Tu as pris des cours de plonger sous-marine dams le but de rejoindre ton ami qui est un biologiste marin dans sa prochaine aventure en Australie.",
     image: (document.querySelector("img").src = "assets/image/fond-marin.jpg"),
-    option: [{ texte: "suivant", action: goToChapter("chapitre2") }],
+    option: [{ texte: "suivant", action: "goToChapter('chapitre2')" }],
   },
   chapitre2: {
     subtitle: " Le premier choix",
     texte:
-      "tu as le choix d'apporter ta caméra Go Pro dans le but de filmer ton expérience.",
-    image: "font-marin.jpg",
+      "Tu as le choix d'apporter ta caméra Go Pro dans le but de filmer ton expérience.",
+    image: (document.querySelector("img").src = "assets/image/fond-marin.jpg"),
     option: [
       { texte: "oui", action: "goToChapter('chapitre3')" },
       { texte: "non", action: "goToChapter('chapitre3')" },
@@ -20,8 +20,8 @@ let chapiterObj = {
   chapitre3: {
     subtitle: " deuxième choix",
     texte:
-      "quelques semaine plus tard, toi et ton ami vous vous apreter a plonger dans l'eau. Ton ami te dit que vous devez explorer la faune marine qui vie pres de l'épave du bateau qui se trouve a droite. ",
-    image: "font-marin",
+      "Quelques semaines plus tard, toi et ton ami vous vous aprèter à plonger dans l'eau. Ton ami te dit que vous devez explorer la faune marine qui vie pres de l'épave du bateau qui se trouve a droite. ",
+    image: (document.querySelector("img").src = "assets/image/fond-marin.jpg"),
     option: [
       { texte: "droite", action: "goToChapter('chapitre4')" },
       { texte: "gauche", action: "goToChapter('chapitre3')" },
@@ -31,7 +31,7 @@ let chapiterObj = {
     subtitle: " L'ombre ",
     texte:
       "Tu es dans l'eau et tu regarde a l'entoure de toi tout émerveiller de voir le monde sous-marin. Tu tourne la tête vers la gauche et tu vois quelque chose qui ressemble a un requin dans le fond  de l'Eau. Que fait tu rester avec ton binôme ou partir de ton côté? ",
-    image: "plongeur.jpg",
+    image: (document.querySelector("img").src = "assets/image/plongeur.jpg"),
     option: [
       { texte: "droite", action: "goToChapter('chapitre5')" },
       { texte: "gauche", action: "goToChapter('chapitre8')" },
@@ -41,7 +41,7 @@ let chapiterObj = {
     subtitle: " Le requin ",
     texte:
       "Ton binôme te fait signe qu'il y a un requin qui approche et de rester calme.Est-ce que tu as ta go pros avec toi oui ou non?",
-    image: "requin_seul.jpg",
+    image: (document.querySelector("img").src = "assets/image/requin_seul.jpg"),
     option: [
       { texte: "oui", action: "goToChapter('chapitre6')" },
       { texte: "non", action: "goToChapter('chapitre7')" },
@@ -64,7 +64,7 @@ let chapiterObj = {
   chapitre8: {
     subtitle: " La go pros",
     texte: "As-tu ta go pros? ",
-    image: "font-marin.jpg",
+    image: (document.querySelector("img").src = "assets/image/fond-marin.jpg"),
     option: [
       { texte: "oui", action: "goToChapter('chapitre9')" },
       { texte: "non", action: "goToChapter('chapitre12')" },
@@ -105,11 +105,10 @@ let chapiterObj = {
 
 function goToChapter(chapterName) {
   document.querySelector("h2").textContent =
-    chapiterObj[chapterName]["sous-titre"];
+    chapiterObj[chapterName]["subtitle"];
 
   document.querySelector("h3").textContent = chapiterObj[chapterName]["texte"];
 
   document.querySelector("img").textContent = chapiterObj[chapterName]["image"];
-  document.querySelectorAll("a").textContent =
-    chapiterObj[chapterName]["option"];
+  document.querySelector("a").textContent = chapiterObj[chapterName]["option"];
 }

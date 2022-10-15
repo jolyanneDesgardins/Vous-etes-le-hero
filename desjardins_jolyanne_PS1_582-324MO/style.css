@@ -41,7 +41,7 @@ body {
 
   box-sizing: border-box;
   padding-bottom: 5px;
-
+  bottom: 10px;
   max-height: 390px;
 }
 
@@ -66,6 +66,7 @@ h2 {
 h3 {
   color: #d8d8dd;
   top: 80px;
+  font-size: 17px;
 }
 
 a {
