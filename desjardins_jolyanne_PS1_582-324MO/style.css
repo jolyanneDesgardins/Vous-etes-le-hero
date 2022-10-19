@@ -62,14 +62,13 @@ h2 {
   letter-spacing: 0.15em;
   color: #020f47a5;
 }
-
-h3 {
+.texte {
   color: #d8d8dd;
   top: 80px;
   font-size: 17px;
 }
 
-a {
+button{
   display: inline-flex;
   justify-content: space-around;
   background-color: #d8d8dd;
@@ -79,7 +78,8 @@ a {
   align-items: flex-end;
 }
 
-a:hover {
+
+button:hover {
   background-color: #020f47a5;
   transition-property: background-color;
   transition-duration: 0.5s;
