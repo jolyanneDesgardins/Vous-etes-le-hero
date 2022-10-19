@@ -110,7 +110,7 @@ function goToChapter(chapterName) {
     chapiterObj[chapterName]["texte"];
   document.querySelector(".image").src = chapiterObj[chapterName]["image"];
 
-  document.querySelector("button").innerHTML = "";
+  document.querySelector(".chose").innerHtml = " ";
 
   for (i in chapiterObj[chapterName].option) {
     const boutons = document.createElement("button");
@@ -124,7 +124,7 @@ function goToChapter(chapterName) {
     parent.appendChild(boutons);
   }
 
-  let keyFounded = false;
+  /*let keyFounded = false;
 
   function key() {
     keyFounded = true;
@@ -135,4 +135,6 @@ function goToChapter(chapterName) {
     keyFounded = true;
     goToChapter("chapitre3");
   }
+}
+*/
 }
