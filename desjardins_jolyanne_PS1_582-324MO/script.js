@@ -123,15 +123,16 @@ function goToChapter(chapterName) {
     const parent = document.querySelector(".chose");
     parent.appendChild(boutons);
   }
-}
-let keyFounded = false;
 
-function key() {
-  keyFounded = true;
-  goToChapter("chapitre3");
-}
+  let keyFounded = false;
 
-function keystatut() {
-  keyFounded = true;
-  goToChapter("chapitre3");
+  function key() {
+    keyFounded = true;
+    goToChapter("chapitre3");
+  }
+
+  function keystatut() {
+    keyFounded = true;
+    goToChapter("chapitre3");
+  }
 }
