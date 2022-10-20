@@ -124,17 +124,16 @@ function goToChapter(chapterName) {
     parent.appendChild(boutons);
   }
 
-  /*let keyFounded = false;
+  let keyFounded = false;
 
   function key() {
     keyFounded = true;
     goToChapter("chapitre3");
   }
 
-  function keystatut() {
-    keyFounded = true;
-    goToChapter("chapitre3");
+  if (keyFounded == true) {
+    function keystatut() {
+      goToChapter("chapitre3");
+    }
   }
-}
-*/
 }
