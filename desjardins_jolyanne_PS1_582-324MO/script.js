@@ -142,3 +142,4 @@ function key() {
   }
 }
 goToChapter("chapitre1");
+/* Je comprend pas pourquoi mais a chaque fois que je clique sur un de mes boutons il se multiplie et même avec de Jasmine et des autres tuteur on jamais réussi a trouver le problème*/
