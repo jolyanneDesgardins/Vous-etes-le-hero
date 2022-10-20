@@ -110,7 +110,7 @@ function goToChapter(chapterName) {
     chapiterObj[chapterName]["texte"];
   document.querySelector(".image").src = chapiterObj[chapterName]["image"];
 
-  document.querySelector(".chose").innerHtml = " ";
+  document.querySelector(".chose").innerHtml: = " "; //HTML
 
   for (i in chapiterObj[chapterName].option) {
     const boutons = document.createElement("button");
