@@ -86,7 +86,7 @@ let chapiterObj = {
   chapitre10: {
     subtitle: " Restez calme",
     texte:
-      "Tu  film le tout et le requin fini par faire demi-tour.tu retrouves ton ami et vous remontez sur le bateau et tu réalise que tu n'as plus ta go pro et on t'annonce que tu as va perdre ta licence de plongeur car du as désobéis à la première règle de sécurité en plonger. ",
+      "Tu  film le tout et le requin fini par faire demi-tour.Tu retrouves ton ami et vous remontez sur le bateau et tu réalise que tu n'as plus ta go pro et on t'annonce que tu as va perdre ta licence de plongeur car du as désobéis à la première règle de sécurité en plonger. ",
     image: "assets/image/requin_de_face.jpg",
   },
   chapitre11: {
@@ -98,7 +98,7 @@ let chapiterObj = {
   chapitre12: {
     subtitle: "La bombonne",
     texte:
-      " Tu entend un bruit étrange et tu réalise que c'est ta bonbonne et qu'il y a des bulles qui sortent. tu t'es éloigner de ton binôme donc il est trop loin pour pouvoir t'aider. Tu manque de plus en plus d'air et tu fini par mourrir avant que la bombonne se vide completement. ",
+      " Tu entend un bruit étrange et tu réalise que c'est ta bonbonne et qu'il y a des bulles qui sortent. Tu t'es éloigner de ton binôme,donc il est trop loin pour pouvoir t'aider. Tu manque de plus en plus d'air et tu fini par mourrir avant que la bombonne se vide completement. ",
     image: "assets/image/bulle_aire.jpg",
   },
 };
@@ -123,17 +123,22 @@ function goToChapter(chapterName) {
     const parent = document.querySelector(".chose");
     parent.appendChild(boutons);
   }
+}
 
-  let keyFounded = false;
+let keyFounded = false;
 
-  function key() {
-    keyFounded = true;
-    goToChapter("chapitre3");
-  }
+function key() {
+  keyFounded = true;
+  goToChapter("chapitre3");
+}
 
-  if (keyFounded == true) {
-    function keystatut() {
+{
+  function keystatut() {
+    if (keyFounded == true) {
       goToChapter("chapitre3");
+    } else {
+      goToChapter("chapitre12");
     }
   }
 }
+goToChapter("chapitre1");
