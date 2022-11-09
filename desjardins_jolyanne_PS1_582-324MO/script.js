@@ -125,16 +125,16 @@ function goToChapter(chapterName) {
   }
 }
 
-let keyFounded = false;
+let cameraFounded = false;
 
-function key() {
+function camera() {
   keyFounded = true;
   goToChapter("chapitre3");
 }
 
 {
-  function keystatut() {
-    if (keyFounded == true) {
+  function camerastatut() {
+    if (cameraFounded == true) {
       goToChapter("chapitre3");
     } else {
       goToChapter("chapitre12");
