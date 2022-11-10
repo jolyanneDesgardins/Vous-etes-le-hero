@@ -110,7 +110,7 @@ function goToChapter(chapterName) {
     chapiterObj[chapterName]["texte"];
   document.querySelector(".image").src = chapiterObj[chapterName]["image"];
 
-  document.querySelector(".chose").innerHtml = " ";
+  document.querySelector(".chose").innerHtml: = " "; //HTML
 
   for (i in chapiterObj[chapterName].option) {
     const boutons = document.createElement("button");
@@ -125,16 +125,26 @@ function goToChapter(chapterName) {
   }
 }
 
-let keyFounded = false;
+let cameraFounded = false;
 
+<<<<<<< HEAD
 function goPro() {
   goProFounded = true;
+=======
+function camera() {
+  keyFounded = true;
+>>>>>>> 63813c9d4b25e258517dd9d125f220523e4eb258
   goToChapter("chapitre3");
 }
 
 {
+<<<<<<< HEAD
   function goProstatut() {
     if (goProFounded == true) {
+=======
+  function camerastatut() {
+    if (cameraFounded == true) {
+>>>>>>> 63813c9d4b25e258517dd9d125f220523e4eb258
       goToChapter("chapitre3");
     } else {
       goToChapter("chapitre12");
