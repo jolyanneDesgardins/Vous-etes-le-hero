@@ -2,7 +2,7 @@ let chapiterObj = {
   chapitre1: {
     subtitle: "La rencontre",
     texte:
-      "Tu as pris des cours de plonger sous-marine dams le but de rejoindre ton ami qui est un biologiste marin dans sa prochaine aventure en Australie.",
+      "Tu as pris des cours de plonger sous-marine dans le but de rejoindre ton ami qui est un biologiste marin dans sa prochaine aventure en Australie.",
     image: (document.querySelector("img").src = "assets/image/fond-marin.jpg"),
     option: [{ texte: "suivant", action: "goToChapter('chapitre2')" }],
   },
@@ -30,7 +30,7 @@ let chapiterObj = {
   chapitre4: {
     subtitle: " L'ombre ",
     texte:
-      "Tu es dans l'eau et tu regarde a l'entoure de toi tout émerveiller de voir le monde sous-marin. Tu tourne la tête vers la gauche et tu vois quelque chose qui ressemble a un requin dans le fond  de l'Eau. Que fait tu rester avec ton binôme ou partir de ton côté? ",
+      "Tu es dans l'eau et tu regardes a l'entoure de toi tout émerveiller de voir le monde sous-marin. Tu tourne la tête vers la gauche et tu vois quelque chose qui ressemble a un requin dans le fond  de l'Eau. Que fait tu rester avec ton binôme ou partir de ton côté? ",
     image: "assets/image/plongeur.jpg",
     option: [
       { texte: "droite", action: "goToChapter('chapitre5')" },
@@ -76,9 +76,9 @@ let chapiterObj = {
       "Tu vas à gauche et prend une change de t'éloigner de ton binome pour filmer le requin que tu pense avoir vu.Tu t'approche tranquillement et c'est la que tu réalise que c'est un grand requin blanc et c'est la premiere fois que tu vois un requin et tu te souvient plus se qu'il faut faire.Que fais-tu? ",
     image: "assets/image/requin_de_face.jpg",
     option: [
-      { texte: "tu reste calme ", action: "goToChapter('chapitre10')" },
+      { texte: "tu restes calme ", action: "goToChapter('chapitre10')" },
       {
-        texte: "tu a vraiment peur et tu t'enfuis ",
+        texte: "tu as vraiment peur et tu t'enfuis ",
         action: "goToChapter('chapitre11')",
       },
     ],
@@ -98,7 +98,7 @@ let chapiterObj = {
   chapitre12: {
     subtitle: "La bombonne",
     texte:
-      " Tu entend un bruit étrange et tu réalise que c'est ta bonbonne et qu'il y a des bulles qui sortent. Tu t'es éloigner de ton binôme,donc il est trop loin pour pouvoir t'aider. Tu manque de plus en plus d'air et tu fini par mourrir avant que la bombonne se vide completement. ",
+      " Tu entends un bruit étrange et tu réalise que c'est ta bonbonne et qu'il y a des bulles qui sortent. Tu t'es éloigner de ton binôme,donc il est trop loin pour pouvoir t'aider. Tu manque de plus en plus d'air et tu fini par mourrir avant que la bombonne se vide completement. ",
     image: "assets/image/bulle_aire.jpg",
   },
 };
@@ -127,14 +127,14 @@ function goToChapter(chapterName) {
 
 let keyFounded = false;
 
-function key() {
-  keyFounded = true;
+function goPro() {
+  goProFounded = true;
   goToChapter("chapitre3");
 }
 
 {
-  function keystatut() {
-    if (keyFounded == true) {
+  function goProstatut() {
+    if (goProFounded == true) {
       goToChapter("chapitre3");
     } else {
       goToChapter("chapitre12");
@@ -142,4 +142,3 @@ function key() {
   }
 }
 goToChapter("chapitre1");
-/* Je comprend pas pourquoi mais a chaque fois que je clique sur un de mes boutons il se multiplie et même avec de Jasmine et des autres tuteur on jamais réussi a trouver le problème*/
