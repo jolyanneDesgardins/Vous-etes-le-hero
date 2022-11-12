@@ -110,7 +110,7 @@ function goToChapter(chapterName) {
     chapiterObj[chapterName]["texte"];
   document.querySelector(".image").src = chapiterObj[chapterName]["image"];
 
-  document.querySelector(".chose").innerHTML = " "; //HTML
+  document.querySelector(".chose").innerHTML = " ";
 
   for (i in chapiterObj[chapterName].option) {
     const boutons = document.createElement("button");
@@ -122,6 +122,10 @@ function goToChapter(chapterName) {
     boutons.appendChild(node);
     const parent = document.querySelector(".chose");
     parent.appendChild(boutons);
+  }
+
+  if (chapiterObj[chapterName].video != null) {
+    chapiterObj[chapterName].video;
   }
 }
 
