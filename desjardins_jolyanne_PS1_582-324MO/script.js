@@ -3,7 +3,7 @@ let chapiterObj = {
     subtitle: "La rencontre",
     texte:
       "Tu as pris des cours de plonger sous-marine dans le but de rejoindre ton ami qui est un biologiste marin dans sa prochaine aventure en Australie.",
-    image: (document.querySelector("img").src = "assets/image/fond-marin.jpg"),
+    image: "assets/image/fond-marin.jpg",
     option: [{ texte: "suivant", action: "goToChapter('chapitre2')" }],
   },
   chapitre2: {
@@ -109,7 +109,7 @@ function goToChapter(chapterName) {
   document.querySelector(".texte").innerHTML =
     chapiterObj[chapterName]["texte"];
   document.querySelector(".image").src = chapiterObj[chapterName]["image"];
-
+  document.querySelector(".video").innerHTML = " ";
   document.querySelector(".chose").innerHTML = " ";
 
   for (i in chapiterObj[chapterName].option) {
@@ -126,6 +126,8 @@ function goToChapter(chapterName) {
 
   if (chapiterObj[chapterName].video != null) {
     chapiterObj[chapterName].video;
+  } else {
+    document.querySelector(".video").innerHTML = " ";
   }
 }
 
@@ -139,17 +141,17 @@ function goPro() {
 
     goToChapter("chapitre3");
   }
-
-  function goProstatut() {
-    if (goProFounded == true) {
-      function camerastatut() {
-        if (cameraFounded == true) {
-          goToChapter("chapitre3");
-        } else {
-          goToChapter("chapitre12");
-        }
+}
+function goProstatut() {
+  if (goProFounded == true) {
+    function camerastatut() {
+      if (cameraFounded == true) {
+        goToChapter("chapitre3");
+      } else {
+        goToChapter("chapitre12");
       }
     }
   }
 }
+
 goToChapter("chapitre1");
