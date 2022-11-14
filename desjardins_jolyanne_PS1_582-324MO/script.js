@@ -22,6 +22,7 @@ let chapiterObj = {
     texte:
       "Quelques semaines plus tard, toi et ton ami vous vous aprèter à plonger dans l'eau. Ton ami te dit que vous devez explorer la faune marine qui vie pres de l'épave du bateau qui se trouve a droite. ",
     image: "assets/image/fond-marin.jpg",
+
     option: [
       { texte: "droite", action: "goToChapter('chapitre4')" },
       { texte: "gauche", action: "goToChapter('chapitre3')" },
@@ -94,6 +95,7 @@ let chapiterObj = {
     texte:
       "Ton rythe cardiaque accélaire et tu as vraiment peur. Tu décide de nager leplus vite que tu peux dans l'espoir de pouvoir t'en sortire vivant.Finalement, le requin a sentie ton coeur battre vraiment vite et il t'as pris pour un poisson en détresse et il t'a mordu et tu t'es vidé de ton sang. ",
     image: "assets/image/requin_de_face.jpg",
+    video: "asset/mange/ssss",
   },
   chapitre12: {
     subtitle: "La bombonne",
@@ -124,14 +126,35 @@ function goToChapter(chapterName) {
     parent.appendChild(boutons);
   }
 
-  if (chapiterObj[chapterName].video != null) {
+  if (chapiterObj[chapterName][video] != null) {
     chapiterObj[chapterName].video;
   } else {
     document.querySelector(".video").innerHTML = " ";
   }
+} /*si quand on click sur le bour=ton si dans le chapitre il y a une video faire jouer la b=video et enlever la photo*/
+let cameraFounded = false;
+
+function goPro() {
+  cameraFounded = true;
+  goToChapter("chapitre3");
+}
+function goProstatut1() {
+  if (cameraFounded == true) {
+    goToChapter("chapitre9");
+  } else {
+    goToChapter("chapitre12");
+  }
 }
 
-let cameraFounded = false;
+function goProstatut2() {
+  if (cameraFounded == true) {
+    goToChapter("chapitre10");
+  } else {
+    goToChapter("chapitre11");
+  }
+}
+
+/*let cameraFounded = false;
 
 function goPro() {
   cameraFounded = true;
@@ -152,6 +175,6 @@ function goProstatut() {
       }
     }
   }
-}
+}*/
 
 goToChapter("chapitre1");
