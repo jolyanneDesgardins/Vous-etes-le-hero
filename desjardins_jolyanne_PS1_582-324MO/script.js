@@ -154,27 +154,4 @@ function goProstatut2() {
   }
 }
 
-/*let cameraFounded = false;
-
-function goPro() {
-  cameraFounded = true;
-
-  function camera() {
-    keyFounded = true;
-
-    goToChapter("chapitre3");
-  }
-}
-function goProstatut() {
-  if (goProFounded == true) {
-    function camerastatut() {
-      if (cameraFounded == true) {
-        goToChapter("chapitre3");
-      } else {
-        goToChapter("chapitre12");
-      }
-    }
-  }
-}*/
-
 goToChapter("chapitre1");
