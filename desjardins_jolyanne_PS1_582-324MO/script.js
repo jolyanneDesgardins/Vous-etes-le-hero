@@ -95,7 +95,7 @@ let chapiterObj = {
     texte:
       "Ton rythe cardiaque accélaire et tu as vraiment peur. Tu décide de nager leplus vite que tu peux dans l'espoir de pouvoir t'en sortire vivant.Finalement, le requin a sentie ton coeur battre vraiment vite et il t'as pris pour un poisson en détresse et il t'a mordu et tu t'es vidé de ton sang. ",
     image: "assets/image/requin_de_face.jpg",
-    video: "asset/mange/ssss",
+    video: "asset/image/requin_mange_video.mp4",
   },
   chapitre12: {
     subtitle: "La bombonne",
@@ -126,10 +126,12 @@ function goToChapter(chapterName) {
     parent.appendChild(boutons);
   }
 
-  if (chapiterObj[chapterName][video] != null) {
-    chapiterObj[chapterName].video;
+  if (chapiterObj[chapterName][video] !== null) {
+    document.querySelector(".video").src = chapiterObj[chapterName][video];
+    video.play();
   } else {
     document.querySelector(".video").innerHTML = " ";
+    document.querySelector(".image").src = chapiterObj[chapterName]["image"];
   }
 } /*si quand on click sur le bour=ton si dans le chapitre il y a une video faire jouer la b=video et enlever la photo*/
 let cameraFounded = false;
