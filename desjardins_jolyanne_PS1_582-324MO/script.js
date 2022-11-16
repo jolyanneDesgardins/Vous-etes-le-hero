@@ -132,6 +132,11 @@ function goToChapter(chapterName) {
   } else {
     document.querySelector(".video").innerHTML = " ";
     document.querySelector(".image").src = chapiterObj[chapterName]["image"];
+  }  /*if (chapiterObj[chapterName][video]) {
+    document.querySelector(".video").src =`<video src="${chapiterObj[chapterName]["video"]}" class="video" loop autoplay muted>`;
+  
+  } else {
+    document.querySelector(".image").src = `<img src="${chapiterObj[chapterName]["image"]}" class="video" >`;
   }
 } /*si quand on click sur le bour=ton si dans le chapitre il y a une video faire jouer la b=video et enlever la photo*/
 let cameraFounded = false;
