@@ -95,7 +95,7 @@ let chapiterObj = {
     texte:
       "Ton rythe cardiaque accélaire et tu as vraiment peur. Tu décide de nager leplus vite que tu peux dans l'espoir de pouvoir t'en sortire vivant.Finalement, le requin a sentie ton coeur battre vraiment vite et il t'as pris pour un poisson en détresse et il t'a mordu et tu t'es vidé de ton sang. ",
     image: "assets/image/requin_de_face.jpg",
-    video: "des atouts/image/requin_mange_video.mp4",
+    video: "asset/image/scuba.mp4",
   },
   chapitre12: {
     subtitle: "La bombonne",
@@ -111,7 +111,7 @@ function goToChapter(chapterName) {
   document.querySelector(".texte").innerHTML =
     chapiterObj[chapterName]["texte"];
   document.querySelector(".image").src = chapiterObj[chapterName]["image"];
- 
+
   document.querySelector(".chose").innerHTML = " ";
 
   for (i in chapiterObj[chapterName].option) {
@@ -127,19 +127,14 @@ function goToChapter(chapterName) {
     localStorage.setItem("chapiterObj", chapterName);
   }
 
-  if (chapiterObj[chapterName][video]) {
-    document.querySelector(".image").src = `<video "${chapiterObj[chapterName][video]}" class="video" autoplay loop muted>`;
-   
+  if (chapiterObj[chapterName].video !== undefined) {
+    document.querySelector(
+      ".img"
+    ).innerHTML = `<video "${chapiterObj[chapterName][video]}" class="video" autoplay loop muted>`;
   } else {
-    
     document.querySelector(".image").src = chapiterObj[chapterName]["image"];
-  }  /*if (chapiterObj[chapterName][video]) {
-    document.querySelector(".video").src =`<video src="${chapiterObj[chapterName]["video"]}" class="video" loop autoplay muted>`;
-  
-  } else {
-    document.querySelector(".image").src = `<img src="${chapiterObj[chapterName]["image"]}" class="video" >`;
   }
-} /*si quand on click sur le bour=ton si dans le chapitre il y a une video faire jouer la b=video et enlever la photo*/
+}
 let cameraFounded = false;
 
 function goPro() {
