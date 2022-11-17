@@ -31,7 +31,7 @@ body {
   text-align: center;
 }
 
-.image {
+.images {
   position: relative;
   display: flex;
   justify-content: center;
@@ -91,10 +91,12 @@ button:hover {
 }
 .video {
   position: relative;
-  display: none;
   top: 230px; /*230*/
   object-fit: contain;
   width: 50%;
   height: 52%;
   left: 25%;
+  z-index: 1;
+}
+
 }
