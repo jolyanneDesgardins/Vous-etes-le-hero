@@ -105,7 +105,12 @@ let chapiterObj = {
   },
 };
 
+let bruit= new Audio("assets/youpi.wav");
 function goToChapter(chapterName) {
+  bruit.play();
+  bruit.curentTime=0
+  localStorage.setItem("NomDuChapitre", chapterName);
+
   document.querySelector("h2").innerHTML = chapiterObj[chapterName]["subtitle"];
 
   document.querySelector(".texte").innerHTML =
@@ -124,10 +129,10 @@ function goToChapter(chapterName) {
     boutons.appendChild(node);
     const parent = document.querySelector(".chose");
     parent.appendChild(boutons);
-    localStorage.setItem("chapiterObj", chapterName);
+    
   }
 
-  if (chapiterObj[chapterName]['video']) {
+  if (chapiterObj[chapterName]['video']!= undefined) {
     document.querySelector(".imgSwitch").innerHTML = `<video src="${chapiterObj[chapterName]['video']}" class="video" autoplay loop muted></video>`;
   } else {
     document.querySelector(".imgSwitch").src = chapiterObj[chapterName]["image"];
@@ -138,6 +143,7 @@ let cameraFounded = false;
 function goPro() {
   cameraFounded = true;
   goToChapter("chapitre3");
+  localStorage.setItem("gopro",true);
 }
 function goProstatut1() {
   if (cameraFounded == true) {
@@ -156,5 +162,15 @@ function goProstatut2() {
 }
 
 goToChapter("chapitre1");
-let bruit= new Audio("assets/youpi.wav")
-bruit.play();
+let save=localStorage.getItem("NomDuChapitre")
+if(save==null){
+  goToChapter(chapitre1)
+}else{
+  goToChapter(save);
+}
+let key= localStorage.getItem("gopro");
+if(key==null){
+  cameraFounded=false
+}else{
+  cameraFounded=Boolean(key);
+}
