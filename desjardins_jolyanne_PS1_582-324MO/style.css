@@ -36,7 +36,7 @@ body {
   display: flex;
   justify-content: center;
   align-self: center;
-  width: 100%;
+  width: 90%;
   box-sizing: border-box;
   padding-bottom: 5px;
   bottom: 10px;
@@ -94,7 +94,7 @@ button:hover {
   top: 15px;
   object-fit: contain;
   width: 100%;
- 
+
   z-index: 1;
 }
 

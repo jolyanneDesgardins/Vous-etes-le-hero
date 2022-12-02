@@ -74,7 +74,7 @@ let chapiterObj = {
   chapitre9: {
     subtitle: " La décision",
     texte:
-      "Tu vas à gauche et prend une change de t'éloigner de ton binome pour filmer le requin que tu pense avoir vu.Tu t'approche tranquillement et c'est la que tu réalise que c'est un grand requin blanc et c'est la premiere fois que tu vois un requin et tu te souvient plus se qu'il faut faire.Que fais-tu? ",
+      "Tu vas à gauche et prend une change de t'éloigner de ton binome pour filmer le requin que tu pense avoir vu.Tu t'approche tranquillement et c'est la que tu réalise que c'est un grand requin blanc, c'est la premiere fois que tu vois un requin.Que fais-tu? ",
     image: "assets/image/requin_de_face.jpg",
     option: [
       { texte: "tu restes calme ", action: "goToChapter('chapitre10')" },
