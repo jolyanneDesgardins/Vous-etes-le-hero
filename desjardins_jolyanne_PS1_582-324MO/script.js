@@ -31,7 +31,7 @@ let chapiterObj = {
   chapitre4: {
     subtitle: " L'ombre ",
     texte:
-      "Tu es dans l'eau et tu regardes a l'entoure de toi tout émerveiller de voir le monde sous-marin. Tu tourne la tête vers la gauche et tu vois quelque chose qui ressemble a un requin dans le fond  de l'Eau. Que fait tu rester avec ton binôme ou partir de ton côté? ",
+      "Tu es dans l'eau et tu regardes à l'entoure de toi, émerveiller de voir le monde sous-marin. Tu tournes la tête vers la gauche et tu vois quelque chose qui ressemble à un requin dans le fond de l'eau. Que fait tu rester avec ton binôme ou partir de ton côté? ",
     image: "assets/image/plongeur.jpg",
     option: [
       { texte: "droite", action: "goToChapter('chapitre5')" },
@@ -51,14 +51,14 @@ let chapiterObj = {
   chapitre6: {
     subtitle: " Le requin ",
     texte:
-      "Toi et ton ami êtent soudainement entouré d'un groupe de requin tigre qui nagent à l'entoure de vous comme si vous n'étiez pas là.Tu prend ta go pro pour filmer se moment magique.le requin fini par faire demi-tour et tu as pus tout filmer de ton expérience ",
+      "Toi et ton ami êtent soudainement entouré d'un groupe de requin tigre qui nagent à l'entoure de vous comme si vous n'étiez pas là.Tu prend ta go pro pour filmer se moment magique.le requin fini par faire demi-tour et tu as pus tout filmer de ton expérience. ",
     image: "assets/image/plongeur_et_requin.jpg",
     option: [{ texte: "suivant", action: "goToChapter('chapitre7')" }],
   },
   chapitre7: {
     subtitle: "Le danger ",
     texte:
-      " Tu entend un bruit étrange et tu réalise que c'est ta bonbonne et qu'il y a des bulles qui sortent. Ton ami se retourne et voit que tu as un problème et te passe son d'étendeur d'urgence et vous remontez à la surface ",
+      " Tu entend un bruit étrange et tu réalise que c'est ta bonbonne.Il y a des bulles qui en sortent. Ton ami se retourne et voit que tu as un problème et te passe son d'étendeur d'urgence et vous remontez à la surface. ",
     image: "assets/image/bulle-air.jpg",
     option: [{ texte: "suivant", action: "goToChapter('chapitre8')" }],
   },
@@ -105,10 +105,19 @@ let chapiterObj = {
   },
 };
 
-let bruit= new Audio("assets/youpi.wav");
+let bruit = new Audio("assets/youpi.wav");
+
 function goToChapter(chapterName) {
-  bruit.play();
-  bruit.curentTime=0
+  let sonInput = document.querySelector('[type="checkbok"]');
+  let sonActiver = sonInput.checked;
+
+  if (sonActiver == true) {
+    bruit.play();
+  } else {
+    bruit.paused();
+  }
+
+  bruit.curentTime = 0;
   localStorage.setItem("NomDuChapitre", chapterName);
 
   document.querySelector("h2").innerHTML = chapiterObj[chapterName]["subtitle"];
@@ -129,13 +138,15 @@ function goToChapter(chapterName) {
     boutons.appendChild(node);
     const parent = document.querySelector(".chose");
     parent.appendChild(boutons);
-    
   }
 
-  if (chapiterObj[chapterName]['video']!= undefined) {
-    document.querySelector(".imgSwitch").innerHTML = `<video src="${chapiterObj[chapterName]['video']}" class="video" autoplay loop muted></video>`;
+  if (chapiterObj[chapterName]["video"] != undefined) {
+    document.querySelector(
+      ".imgSwitch"
+    ).innerHTML = `<video src="${chapiterObj[chapterName]["video"]}" class="video" autoplay loop muted></video>`;
   } else {
-    document.querySelector(".imgSwitch").src = chapiterObj[chapterName]["image"];
+    document.querySelector(".imgSwitch").src =
+      chapiterObj[chapterName]["image"];
   }
 }
 let cameraFounded = false;
@@ -143,7 +154,7 @@ let cameraFounded = false;
 function goPro() {
   cameraFounded = true;
   goToChapter("chapitre3");
-  localStorage.setItem("gopro",true);
+  localStorage.setItem("gopro", true);
 }
 function goProstatut1() {
   if (cameraFounded == true) {
@@ -162,15 +173,26 @@ function goProstatut2() {
 }
 
 goToChapter("chapitre1");
-let save=localStorage.getItem("NomDuChapitre")
-if(save==null){
-  goToChapter(chapitre1)
-}else{
+let save = localStorage.getItem("NomDuChapitre");
+if (save == null) {
+  goToChapter(chapitre1);
+} else {
   goToChapter(save);
 }
-let key= localStorage.getItem("gopro");
-if(key==null){
-  cameraFounded=false
-}else{
-  cameraFounded=Boolean(key);
+let key = localStorage.getItem("gopro");
+if (key == null) {
+  cameraFounded = false;
+} else {
+  cameraFounded = Boolean(key);
 }
+
+function reset() {
+  cameraFounded = false;
+  goToChapter("chapitre1");
+  localStorage.clear();
+}
+
+let btnRetour = document.querySelector(".retour");
+btnRetour.addEventListener("click", function () {
+  reset();
+});
