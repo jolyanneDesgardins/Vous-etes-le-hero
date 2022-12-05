@@ -59,7 +59,7 @@ let chapiterObj = {
     subtitle: "Le danger ",
     texte:
       " Tu entend un bruit étrange et tu réalise que c'est ta bonbonne.Il y a des bulles qui en sortent. Ton ami se retourne et voit que tu as un problème et te passe son d'étendeur d'urgence et vous remontez à la surface. ",
-    image: "assets/image/bulle-air.jpg",
+    image: "assets/image/plongeur_et_requin.jpg",
     option: [{ texte: "suivant", action: "goToChapter('chapitre8')" }],
   },
   chapitre8: {
@@ -108,6 +108,8 @@ let chapiterObj = {
 let bruit = new Audio("assets/youpi.wav");
 
 function goToChapter(chapterName) {
+  let body = document.querySelector("body");
+  body.className = chapterName;
   let sonInput = document.querySelector('[type="checkbox"]');
   let sonActiver = sonInput.checked;
 
@@ -199,3 +201,6 @@ btnRetour.addEventListener("click", function () {
 
 
 goToChapter("chapitre1");
+
+
+console.log( body);
