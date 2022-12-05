@@ -108,7 +108,7 @@ let chapiterObj = {
 let bruit = new Audio("assets/youpi.wav");
 
 function goToChapter(chapterName) {
-  let sonInput = document.querySelector('[type="checkbok"]');
+  let sonInput = document.querySelector('[type="checkbox"]');
   let sonActiver = sonInput.checked;
 
   if (sonActiver == true) {
@@ -196,3 +196,6 @@ let btnRetour = document.querySelector(".retour");
 btnRetour.addEventListener("click", function () {
   reset();
 });
+
+
+goToChapter("chapitre1");
