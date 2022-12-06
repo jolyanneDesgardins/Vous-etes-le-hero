@@ -93,7 +93,7 @@ let chapiterObj = {
   chapitre11: {
     subtitle: " Au mon dieu, je veux pas mourrir",
     texte:
-      "Ton rythe cardiaque accélaire et tu as vraiment peur. Tu décide de nager leplus vite que tu peux dans l'espoir de pouvoir t'en sortire vivant.Finalement, le requin a sentie ton coeur battre vraiment vite et il t'as pris pour un poisson en détresse et il t'a mordu et tu t'es vidé de ton sang. ",
+      "Ton rythe cardiaque accélaire et tu as vraiment peur. Tu décide de nager le plus vite que tu peux dans l'espoir de pouvoir t'en sortire vivant.Finalement, le requin a sentie ton coeur battre vraiment vite et il t'as pris pour un poisson en détresse et il t'a mordu et tu t'es vidé de ton sang. ",
     image: "assets/image/requin_de_face.jpg",
     video: "assets/scuba.mp4",
   },
@@ -199,8 +199,6 @@ btnRetour.addEventListener("click", function () {
   reset();
 });
 
-
 goToChapter("chapitre1");
 
-
-console.log( body);
+console.log(body);

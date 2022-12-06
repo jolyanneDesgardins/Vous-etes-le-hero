@@ -113,6 +113,6 @@ button:hover {
   position: relative;
   bottom: 50px;
 }
-.chapitre2{
-  background-color: white;
+.chapitre4 {
+  background: linear-gradient(to bottom, #005dc7, #04234e);
 }
