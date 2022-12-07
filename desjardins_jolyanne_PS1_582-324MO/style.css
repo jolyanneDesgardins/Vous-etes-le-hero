@@ -29,6 +29,7 @@ body {
   padding: 10px;
   box-sizing: border-box;
   text-align: center;
+  box-shadow: 25px 25px 25px;
 }
 
 .images {
@@ -115,4 +116,8 @@ button:hover {
 }
 .chapitre4 {
   background: linear-gradient(to bottom, #005dc7, #04234e);
+  background-color: #1e5288;
+}
+.chapitre12 .game {
+  box-shadow: 2px 8px 25px 21px white;
 }
